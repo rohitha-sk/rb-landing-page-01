@@ -1,12 +1,15 @@
-import React from 'react'
-import { MobileNavbar } from './MobileNavbar'
+import React, { useState } from "react";
+import LandyMenu from "./LandyMenu";
+import Content from "./Content";
 
 const Navbar = () => {
+  const [isOpen, setIsOpen] = useState(false);
   return (
     <div>
-        <MobileNavbar />
+      <Content setIsOpen={setIsOpen} />
+      <LandyMenu isOpen={isOpen} setIsOpen={setIsOpen} />
     </div>
-  )
-}
+  );
+};
 
-export default Navbar
+export default Navbar;
